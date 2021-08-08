@@ -17,92 +17,11 @@ namespace HostelSystem_TestWebApp.Controllers
         private ReservationContext db = new ReservationContext();
 
         // GET: api/Guests
+        // "metoda zrzucająca listę wszystkich gości o imieniu Piotr z miasta Wrocław lub bez miasta"
         public IQueryable<Guest> GetGuests()
         {
-            return from guest in db.Guests
-                   where guest.Name == "Piotr" 
-                        && new string[] { null, "Wrocław" }.Contains(guest.City) 
-                    select guest;
+            return Services.ReservationManager.GetPetersFromBreslauOrNot();
         }
-
-        // GET: api/Guests/5
-        //[ResponseType(typeof(Guest))]
-        //public IHttpActionResult GetGuest(int id)
-        //{
-        //    Guest guest = db.Guests.Find(id);
-        //    if (guest == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return Ok(guest);
-        //}
-
-        // PUT: api/Guests/5
-        //[ResponseType(typeof(void))]
-        //public IHttpActionResult PutGuest(int id, Guest guest)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest(ModelState);
-        //    }
-
-        //    if (id != guest.ID)
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //    db.Entry(guest).State = EntityState.Modified;
-
-        //    try
-        //    {
-        //        db.SaveChanges();
-        //    }
-        //    catch (DbUpdateConcurrencyException)
-        //    {
-        //        if (!GuestExists(id))
-        //        {
-        //            return NotFound();
-        //        }
-        //        else
-        //        {
-        //            throw;
-        //        }
-        //    }
-
-        //    return StatusCode(HttpStatusCode.NoContent);
-        //}
-
-        // POST: api/Guests
-        //[ResponseType(typeof(Guest))]
-        //public IHttpActionResult PostGuest(Guest guest)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest(ModelState);
-        //    }
-
-        //    db.Guests.Add(guest);
-        //    db.SaveChanges();
-
-        //    return CreatedAtRoute("DefaultApi", new { id = guest.ID }, guest);
-        //}
-
-        // DELETE: api/Guests/5
-        //[ResponseType(typeof(Guest))]
-        //public IHttpActionResult DeleteGuest(int id)
-        //{
-        //    Guest guest = db.Guests.Find(id);
-        //    if (guest == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    db.Guests.Remove(guest);
-        //    db.SaveChanges();
-
-        //    return Ok(guest);
-        //}
 
         protected override void Dispose(bool disposing)
         {

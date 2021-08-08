@@ -108,6 +108,10 @@
     <Compile Include="Migrations\202108081527441_Initial.Designer.cs">
       <DependentUpon>202108081527441_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108081721016_Extending_Guest_model.cs" />
+    <Compile Include="Migrations\202108081721016_Extending_Guest_model.Designer.cs">
+      <DependentUpon>202108081721016_Extending_Guest_model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Guest.cs" />
     <Compile Include="Models\Reservation.cs" />
@@ -129,6 +133,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202108081527441_Initial.resx">
       <DependentUpon>202108081527441_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108081721016_Extending_Guest_model.resx">
+      <DependentUpon>202108081721016_Extending_Guest_model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

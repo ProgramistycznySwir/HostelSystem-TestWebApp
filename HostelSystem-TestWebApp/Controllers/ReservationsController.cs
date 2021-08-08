@@ -19,21 +19,21 @@ namespace HostelSystem_TestWebApp.Controllers
         // GET: api/Reservations
         public IQueryable<Reservation> GetReservations()
         {
-            return db.Reservations;
+            return Services.ReservationManager.GetAllReservations();
         }
 
         // GET: api/Reservations/5
-        [ResponseType(typeof(Reservation))]
-        public IHttpActionResult GetReservation(int id)
-        {
-            Reservation reservation = db.Reservations.Find(id);
-            if (reservation == null)
-            {
-                return NotFound();
-            }
+        //[ResponseType(typeof(Reservation))]
+        //public IHttpActionResult GetReservation(int id)
+        //{
+        //    Reservation reservation = db.Reservations.Find(id);
+        //    if (reservation == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return Ok(reservation);
-        }
+        //    return Ok(reservation);
+        //}
 
         // PUT: api/Reservations/5
         [ResponseType(typeof(void))]
