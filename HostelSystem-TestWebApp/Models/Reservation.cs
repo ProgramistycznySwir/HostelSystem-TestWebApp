@@ -40,6 +40,19 @@ namespace HostelSystem_TestWebApp.Models
     }
 }
 /*
+new Reservation {
+    Code= "",
+    CreationDate= new DateTime(2020, 5, 5),
+    Price= 45000,
+    CheckInDate= new DateTime(2020, 6, 5),
+    CheckOutDate= new DateTime(2020, 6, 7),
+    CurrencyCode= "PLN",
+    //ID,
+
+    Provision= 4000,
+    Source= "Facebook",
+    }
+/*
 {
     "Code" : "aasdasdc",
     "CreationDate" : "2012-04-23T18:25:43.511Z",
