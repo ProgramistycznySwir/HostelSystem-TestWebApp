@@ -106,10 +106,6 @@
     <Compile Include="Migrations\202108081527441_Initial.Designer.cs">
       <DependentUpon>202108081527441_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202108081602428_Fixing_Keys.cs" />
-    <Compile Include="Migrations\202108081602428_Fixing_Keys.Designer.cs">
-      <DependentUpon>202108081602428_Fixing_Keys.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Guest.cs" />
     <Compile Include="Models\Reservation.cs" />
@@ -131,9 +127,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202108081527441_Initial.resx">
       <DependentUpon>202108081527441_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108081602428_Fixing_Keys.resx">
-      <DependentUpon>202108081602428_Fixing_Keys.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
