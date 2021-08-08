@@ -28,7 +28,7 @@ namespace HostelSystem_TestWebApp.Models
         public string CurrencyCode { get; set; }
         //- Id.
         // Nie ma potrzeby komplikować bazy przy pomocy long'a i BIGINT'a, więc tutaj wstawiam zwykłego int'a
-        [Required]
+        [Key]
         public int ID { get; set; }
 
         //- Prowizja,
@@ -39,3 +39,13 @@ namespace HostelSystem_TestWebApp.Models
         public ICollection<Guest> Guests { get; set; }
     }
 }
+/*
+{
+    "Code" : "aasdasdc",
+    "CreationDate" : "2012-04-23T18:25:43.511Z",
+    "Price" : "120",
+    "CheckInDate" : "2012-04-25T18:25:43.511Z",
+    "CheckOutDate" : "2012-04-26T18:25:43.511Z",
+    "CurrencyCode" : "PLN"
+}
+*/

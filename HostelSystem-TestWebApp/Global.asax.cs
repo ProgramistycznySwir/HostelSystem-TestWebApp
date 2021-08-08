@@ -12,6 +12,7 @@ namespace HostelSystem_TestWebApp
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            //Console.Write(Newtonsoft.Json.JsonSerializer.Create().Serialize(Console.Out, new Models.Reservation()));
         }
     }
 }

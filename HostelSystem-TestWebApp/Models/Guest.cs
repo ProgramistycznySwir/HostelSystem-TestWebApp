@@ -18,7 +18,7 @@ namespace HostelSystem_TestWebApp.Models
         [Required]
         public string Email { get; set; }
         //- Id.
-        [Required]
+        [Key]
         public int ID { get; set; }
 
         //- Data urodzenia,

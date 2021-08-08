@@ -72,12 +72,28 @@ namespace HostelSystem_TestWebApp.Controllers
 
         // POST: api/Reservations
         [ResponseType(typeof(Reservation))]
+        //public IHttpActionResult PostReservation(string reservationString)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
+        //    reservationString;
+
+
+        //    db.Reservations.Add(reservation);
+        //    db.SaveChanges();
+
+        //    return CreatedAtRoute("DefaultApi", new { id = reservation.ID }, reservation);
+        //}
         public IHttpActionResult PostReservation(Reservation reservation)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+            if(reservation == null)
+                return BadRequest(ModelState);
 
             db.Reservations.Add(reservation);
             db.SaveChanges();

@@ -22,10 +22,8 @@ namespace HostelSystem_TestWebApp.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Reservation>()
-                .HasKey(a => a.ID)
                 .HasMany(a => a.Guests);
             modelBuilder.Entity<Guest>()
-                .HasKey(a => a.ID)
                 .HasMany(a => a.Reservations);
         }
     }
