@@ -26,6 +26,7 @@ namespace HostelSystem_TestWebApp.Services
                     select guest;
         }
 
+        // "metodą zapisująca rezerwację wraz z gośćmi na podstawie przekazanych parametrów"
         public static void AddReservation(Reservation reservation)
         {
             db.Reservations.Add(reservation);
