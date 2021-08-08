@@ -13,7 +13,7 @@ namespace HostelSystem_TestWebApp.Models
 
         public ReservationContext()
             : base(
-                nameOrConnectionString: "HostelDatabase"
+                nameOrConnectionString: "name=HostelDB"
             )
         {
 
@@ -21,8 +21,12 @@ namespace HostelSystem_TestWebApp.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Reservation>().HasMany<Guest>(a => a.Guests);
-            modelBuilder.Entity<Guest>().HasMany<Reservation>(a => a.Reservations);
+            modelBuilder.Entity<Reservation>()
+                .HasKey(a => a.ID)
+                .HasMany(a => a.Guests);
+            modelBuilder.Entity<Guest>()
+                .HasKey(a => a.ID)
+                .HasMany(a => a.Reservations);
         }
     }
 }
