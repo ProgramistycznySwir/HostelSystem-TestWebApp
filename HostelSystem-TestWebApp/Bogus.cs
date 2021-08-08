@@ -38,7 +38,11 @@ namespace HostelSystem_TestWebApp
             //ID,
 
             BirthDate = new DateTime(rng.Next(1970, 2000), rng.Next(1, 12), rng.Next(1, 12)),
-            PostalCode = Bogus.String(32)
+            PostalCode = Bogus.String(32),
+
+            PhoneNumber = rng.Next(3) == 0 ? rng.Next(100000000, 999999999).ToString() : null,
+            //Address = null,
+            City = new string[] { null, "Wrocław", "Warszawa", "Białystok" }[rng.Next(4)]
         };
     }
 }

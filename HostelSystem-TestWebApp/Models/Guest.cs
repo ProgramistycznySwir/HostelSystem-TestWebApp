@@ -26,6 +26,13 @@ namespace HostelSystem_TestWebApp.Models
         //- Kod pocztowy
         public string PostalCode { get; set; }
 
+        //"Telefon"
+        public string PhoneNumber { get; set; }
+        //"Adres"
+        public string Adress { get; set; }
+        //"Miasto"
+        public string City { get; set; }
+
         public ICollection<Reservation> Reservations { get; set; }
     }
 }
