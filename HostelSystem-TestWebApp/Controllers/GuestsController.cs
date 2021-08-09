@@ -20,7 +20,7 @@ namespace HostelSystem_TestWebApp.Controllers
         // "metoda zrzucająca listę wszystkich gości o imieniu Piotr z miasta Wrocław lub bez miasta"
         public IQueryable<Guest> GetGuests()
         {
-            return Services.ReservationManager.GetPetersFromBreslauOrNot();
+            return Services.ReservationManager.GetPetersFromWrocławOrNot();
         }
 
         protected override void Dispose(bool disposing)

@@ -18,7 +18,7 @@ namespace HostelSystem_TestWebApp.Services
         }
 
         // "metoda zrzucająca listę wszystkich gości o imieniu Piotr z miasta Wrocław lub bez miasta"
-        public static IQueryable<Guest> GetPetersFromBreslauOrNot()
+        public static IQueryable<Guest> GetPetersFromWrocławOrNot()
         {
             return from guest in db.Guests
                    where guest.Name == "Piotr" 
